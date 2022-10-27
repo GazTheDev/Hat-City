@@ -14,10 +14,14 @@
     "@astrojs/netlify": "^1.2.0",
     "@astrojs/sitemap": "^1.0.0",
     "accessible-astro-components": "^1.5.7",
-    "astro-icon": "^0.7.3"
+    "astro-icon": "^0.7.3",
+    "reactjs-popup": "^2.0.5"
   },
   "devDependencies": {
+    "@astrojs/react": "^1.2.1",
     "astro": "^1.4.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "sass": "^1.49.9"
   }
 }

@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config'
 import sitemap from '@astrojs/sitemap';
 import netlify from '@astrojs/netlify/functions';
+import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
@@ -8,6 +9,6 @@ export default defineConfig({
     adapter: netlify(),
     site: 'https://hat-city.co.uk',
 
-    integrations: [sitemap()],
+    integrations: [sitemap(), react()],
 
 })

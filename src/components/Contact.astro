@@ -1,0 +1,47 @@
+--- 
+import DefaultLayout from "../layouts/DefaultLayout.astro";
+import '../assets/scss/form.css'
+import Header from '../components/Header.jsx';
+---
+<script>
+    let form = document.getElementsByTagName("form")[0];
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  alert("Form Submitted!");
+});
+</script>
+
+
+     <DefaultLayout title="Contact Us">
+      <section class="margin-48">
+        <div class="container">
+          <h1>About Us</h1><br>
+        </div>
+      </section>
+      <section class="margin-48">
+        <div class="container" data-auto-grid="2">
+            <Header />
+            <p>Use the contact form to the right to contact us. We will respond within 24 hours.</p>
+            
+    <form  name="contact" method="POST" data-netlify="true">
+        <p>
+          <label>Your Name: <input type="text" name="name" /></label>
+        </p>
+        <p>
+          <label>Your Email: <input type="email" name="email" /></label>
+        </p>
+       
+        </p>
+        <p>
+          <label>Message: <textarea name="message"></textarea></label>
+        </p>
+        
+        <p>
+          <button value="submit" type="submit">Send</button>
+        </p>
+      </form>       </section>
+ 
+
+    </DefaultLayout>
+    
+</DefaultLayout>
