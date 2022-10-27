@@ -1,0 +1,55 @@
+---
+import Navigation from '../components/Navigation.astro'
+import { SkipLinks } from 'accessible-astro-components'
+---
+
+<header>
+  <SkipLinks />
+  <Navigation>
+    <li class="menu-item">
+      <a href="/">Home</a>
+    </li>
+    <li class="menu-item">
+      <a href="/about/">About </a>
+    </li>
+    <li class="menu-item">
+      <a href="/opening-times/">Opening Times</a>
+    </li>
+    <li class="menu-item has-dropdown">
+      <button aria-haspopup="true" aria-expanded="false">Products</button>
+      <ul>
+        <li class="submenu-item">
+          <a href="/dropdown/subpage1/">Bags</a>
+        </li>
+        <li class="submenu-item">
+          <a href="/dropdown/subpage2/">Hats</a>
+        </li>
+        <li class="submenu-item">
+          <a href="/dropdown/subpage3/">CD's and Other Media</a>
+        </li>
+      </ul>
+    </li>
+    
+  </Navigation>
+</header>
+
+<style lang="scss">
+  @use '../assets/scss/base/breakpoint' as *;
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+
+    @include breakpoint(medium) {
+      flex-wrap: nowrap;
+    }
+
+    img {
+      max-height: 40px;
+    }
+  }
+</style>
